@@ -113,15 +113,9 @@
                <%appCount.forEach((app)=>{%>
                   <%clients.forEach((client)=>{%>
                      <%if(app.Client_ID==client.Client_ID&&app.Status=="Approved"){%>
-                           <%var month=""%>
-                           <%if(app.Appointment_Date.getMonth()+1<10){%>
-                                 <%month=month+app.Appointment_Date.getMonth()+1%>
-                           <%}else{%>
-                                 <%month=(app.Appointment_Date.getMonth()+1).toString()%>
-                           <%}%>
                         {
                            title: '<%=client.First_Name%> <%=client.Last_Name%>',
-                           start: '<%=app.Appointment_Date.getFullYear()%>-<%=month%>-<%=app.Appointment_Date.getDate()%>'
+                           start: '<%=app.Appointment_Date.getFullYear()%>-<%=("0"+(app.Appointment_Date.getMonth()+1)).slice(-2)%>-<%=("0"+app.Appointment_Date.getDate()).slice(-2)%>'
                         },
                      <%}%> 
                   <%})%>

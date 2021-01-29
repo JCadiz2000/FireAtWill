@@ -44,10 +44,6 @@ app.use("/",landing);
 const gallery = require("./public/router/gallery.js");
 app.use("/gallery",gallery);
 
-// const admin_gallery = require("./public/router/admin_gallery.js");
-// app.use("/gallery",admin_gallery);
-/* di ra cguro ni needed...naa lay features mahidden/disable depende sa user-type*/
-
 const clientui = require("./public/router/clientui.js");
 app.use("/client",clientui);
 
