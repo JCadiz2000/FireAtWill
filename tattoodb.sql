@@ -1,5 +1,5 @@
-CREATE DATABASE newtattoo_db;
-USE newtattoo_db;
+CREATE DATABASE tattoo_db;
+USE tattoo_db;
 
 CREATE TABLE Artist(
     Artist_ID int NOT NULL AUTO_INCREMENT,
