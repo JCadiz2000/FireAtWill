@@ -3,19 +3,6 @@ const bodyParser = require("body-parser");
 const app = express();
 const session = require("express-session");
 
-
-// var http=require('http');
-// var server=http.createServer(function(req,res){
-//     res.end('test');
-// });
-
-// server.on('listening',function(){
-//     console.log('ok, server is running');
-// });
-
-// server.listen(4000);
-
-
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:false}));
