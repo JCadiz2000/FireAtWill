@@ -164,6 +164,7 @@ router.post("/projdone",mid.admin,(req,res)=>{
 });
 
 router.post("/appstatus",mid.admin,(req,res)=>{
+    console.log(req.query)
     mysql.appStatus(parseInt(req.query.id),parseInt(req.query.check),()=>{
         res.redirect("/admin/appointments");
     });
