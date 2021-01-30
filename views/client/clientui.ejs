@@ -28,16 +28,29 @@
                     <%}%>
                     <%apps.forEach((app)=>{%>
                         <%if(app.Status=="Approved"||app.Status=="Rejected"){%>
-                            <div class="card border border-primary mb-4">
-                                <div class="card-header h6 text-primary">
-                                    Appointment Application
+                            <%if(app.Status=="Approved"){%>
+                                <div class="card border border-primary mb-4">
+                                    <div class="card-header h6 text-primary">
+                                        Appointment Application
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Your appointment for <strong><%=months[app.Appointment_Date.getMonth()]%> <%=app.Appointment_Date.getDate()%>, <%=app.Appointment_Date.getFullYear()%></strong> has been approved. A text message will be delivered to you from the management for your confirmation of the said date.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <p class="card-text">
-                                        Your appointment for <strong><%=months[app.Appointment_Date.getMonth()]%> <%=app.Appointment_Date.getDate()%>, <%=app.Appointment_Date.getFullYear()%></strong> has been approved. A text message will be delivered to you from the management for your confirmation of the said date.
-                                    </p>
+                            <%}else{%>
+                                <div class="card border border-danger mb-4">
+                                    <div class="card-header h6 text-danger">
+                                        Appointment Application
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Your appointment for <strong><%=months[app.Appointment_Date.getMonth()]%> <%=app.Appointment_Date.getDate()%>, <%=app.Appointment_Date.getFullYear()%></strong> has been rejected.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            <%}%>
                         <%}%>
                     <%})%>
                     </div>
