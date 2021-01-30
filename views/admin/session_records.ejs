@@ -27,7 +27,7 @@
                                 You have no recorded sessions
                             </div>
                         <%}%>
-                        <%if(project.Status!="Complete"){%>
+                        <%if(project[0].Status!="Complete"){%>
                             <div class="mb-5" style="float: right;">
                                 <button class="btn btn-success btn-sm" data-mdb-toggle="modal" data-mdb-target="#session"><i class="fa fa-plus"></i> Add Session</button>
                             </div>
