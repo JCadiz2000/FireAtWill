@@ -200,11 +200,11 @@ module.exports = {
     },
     appStatus: function(id,check,callback){
         if(check==1){
-            connection.query("UPDATE appointment SET Status='Approved'",(err,result)=>{
+            connection.query("UPDATE appointment SET Status='Approved' WHERE Appointment_ID="+id,(err,result)=>{
                 callback();
             });
         }else if(check==0){
-            connection.query("UPDATE appointment SET Status='Rejected'",(err,result)=>{
+            connection.query("UPDATE appointment SET Status='Rejected' WHERE Appointment_ID="+id,(err,result)=>{
                 callback();
             });
         }

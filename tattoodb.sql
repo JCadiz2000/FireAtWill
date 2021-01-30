@@ -27,7 +27,7 @@ CREATE TABLE Client(
     Client_ID int NOT NULL AUTO_INCREMENT,
     First_Name VARCHAR(20) NOT NULL,
     Last_Name VARCHAR(20) NOT NULL,
-    Contact_Number VARCHAR(11) NOT NULL,
+    Contact_Number VARCHAR(11) NOT NULL UNIQUE,
     City VARCHAR(30) NOT NULL,
     Street VARCHAR(30) NOT NULL,
     Address VARCHAR(255) NOT NULL,
